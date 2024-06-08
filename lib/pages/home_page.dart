@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
     return Center(
       child: SizedBox(
         height: MediaQuery.sizeOf(context).height * 0.80,
-        width: MediaQuery.sizeOf(context).width * 0.7,
+        width: MediaQuery.sizeOf(context).width * 0.9,
         child: StreamBuilder(
           stream: _databaseService.getTodos(),
           builder: (context, snapshot) {
@@ -292,6 +292,7 @@ class _HomePageState extends State<HomePage> {
                       _databaseService.addTodo(todo);
                       Navigator.of(context).pop();
                       TextTodo.clear();
+                      TextDescription.clear();
                     })
               ],
             );
